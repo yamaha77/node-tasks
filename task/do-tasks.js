@@ -11,11 +11,11 @@ const load = () => {
 }
 
 const save = () => {
+    
     let data = JSON.stringify(list_task);
-
-        fs.writeFile('db/data.json', data, (err) => {
-            if (err) throw err;
-          });
+    fs.writeFile('db/data.json', data, (err) => {
+        if (err) throw err;
+        });
 }
 
 const create = (description) => {
